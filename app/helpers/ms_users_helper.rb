@@ -1,0 +1,2 @@
+module MsUsersHelper
+end

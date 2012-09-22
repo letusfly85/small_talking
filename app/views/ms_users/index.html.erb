@@ -1,0 +1,29 @@
+<h1>Listing ms_users</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>String</th>
+    <th>Language</th>
+    <th>String</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @ms_users.each do |ms_user| %>
+  <tr>
+    <td><%= ms_user.name %></td>
+    <td><%= ms_user.string %></td>
+    <td><%= ms_user.language %></td>
+    <td><%= ms_user.string %></td>
+    <td><%= link_to 'Show', ms_user %></td>
+    <td><%= link_to 'Edit', edit_ms_user_path(ms_user) %></td>
+    <td><%= link_to 'Destroy', ms_user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Ms user', new_ms_user_path %>
