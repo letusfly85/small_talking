@@ -1,0 +1,23 @@
+<h1 align=center><i>STORY LIST</i></h1>
+
+<table align=center border=1 cellspacing=0 bordercolor=#6699CC>
+  <tr>
+    <th bgcolor=#3399FF>Title</th>
+    <th bgcolor=#3399FF>Category</th>
+    <th bgcolor=#3399FF>Summary</th>
+    <th bgcolor=#3399FF>Register User</th>
+  </tr>
+
+<% @rs_stories.each do |rs_story| %>
+  <tr>
+    <td><%= rs_story.title %></td>
+    <td><%= rs_story.category %></td>
+    <td><%= rs_story.summary %></td>
+    <td><%= rs_story.user_id %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<p align=center><i><%= link_to 'Register New Story', new_rs_story_path %></i></p>

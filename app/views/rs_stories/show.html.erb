@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @rs_story.title %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%= @rs_story.category %>
+</p>
+
+<p>
+  <b>Summary:</b>
+  <%= @rs_story.summary %>
+</p>
+
+<p>
+  <b>Contents:</b>
+  <%= @rs_story.contents %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @rs_story.user_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_rs_story_path(@rs_story) %> |
+<%= link_to 'Back', rs_stories_path %>

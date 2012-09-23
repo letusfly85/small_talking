@@ -1,0 +1,2 @@
+module RsStoriesHelper
+end

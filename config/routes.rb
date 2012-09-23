@@ -1,4 +1,6 @@
 SmallTalking::Application.routes.draw do
+  resources :rs_stories
+
   resources :ms_users
 
   # The priority is based upon order of creation:
