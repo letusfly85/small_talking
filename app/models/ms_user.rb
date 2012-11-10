@@ -1,3 +1,3 @@
 class MsUser < ActiveRecord::Base
-  attr_accessible :language, :name
+  attr_accessible :language, :mailaddress, :name
 end

@@ -1,10 +1,12 @@
-<h1 align=center><i>User List</i></h1>
+<h1>Member List</h1>
 
-<table align=center border=1 cellspacing=0>
+<% unless @ms_users.length == 0 %>
+<table>
   <tr>
     <th>id</th>
     <th>Name</th>
     <th>Language</th>
+    <th>Mailaddress</th>
   </tr>
 
 <% @ms_users.each do |ms_user| %>
@@ -12,10 +14,12 @@
     <td><%= ms_user.id %></td>
     <td><%= ms_user.name %></td>
     <td><%= ms_user.language %></td>
+    <td><%= ms_user.mailaddress %></td>
   </tr>
 <% end %>
 </table>
+<% end %>
 
 <br />
 
-<p align=center><i><%= link_to 'Register New Member', new_ms_user_path %></i></p>
+<%= link_to 'Add New Member', new_ms_user_path %>

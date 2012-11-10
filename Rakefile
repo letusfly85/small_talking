@@ -8,7 +8,12 @@ SmallTalking::Application.load_tasks
 
 desc "generate user mater"
 task :generate_ms_user do
-    sh "rails generate scaffold ms_user name:string language:string"
+    sh "rails generate scaffold ms_user name:string language:string mailaddress:string"
+end
+
+desc "generate schedule"
+task :generate_kr_schedule do
+    sh "rails generate scaffold kr_schedule user_id:integer lesson_date:string start_time:string end_time:string location:string"
 end
 
 desc "generate stories"
