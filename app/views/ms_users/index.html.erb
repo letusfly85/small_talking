@@ -1,8 +1,8 @@
-<h1>Member List</h1>
+<h1>MemberShip</h1>
 
 <% unless @ms_users.length == 0 %>
-<table>
-  <tr>
+<table border="0">
+  <tr  bgcolor="mistyrose">
     <th>id</th>
     <th>Name</th>
     <th>Language</th>
@@ -10,11 +10,13 @@
   </tr>
 
 <% @ms_users.each do |ms_user| %>
-  <tr>
+  <tr bgcolor="white">
     <td><%= ms_user.id %></td>
     <td><%= ms_user.name %></td>
     <td><%= ms_user.language %></td>
     <td><%= ms_user.mailaddress %></td>
+    <td><input type="image" src="/images/web-app-theme/button-register.png" value="New Schedule"><td>
+    <td></td>
   </tr>
 <% end %>
 </table>

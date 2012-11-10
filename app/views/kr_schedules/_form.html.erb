@@ -1,0 +1,37 @@
+<%= form_for(@kr_schedule) do |f| %>
+  <% if @kr_schedule.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@kr_schedule.errors.count, "error") %> prohibited this kr_schedule from being saved:</h2>
+
+      <ul>
+      <% @kr_schedule.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user_id %><br />
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :lesson_date %><br />
+    <%= f.text_field :lesson_date %>
+  </div>
+  <div class="field">
+    <%= f.label :start_time %><br />
+    <%= f.text_field :start_time %>
+  </div>
+  <div class="field">
+    <%= f.label :end_time %><br />
+    <%= f.text_field :end_time %>
+  </div>
+  <div class="field">
+    <%= f.label :location %><br />
+    <%= f.text_field :location %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

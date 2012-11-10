@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @kr_schedule.user_id %>
+</p>
+
+<p>
+  <b>Lesson date:</b>
+  <%= @kr_schedule.lesson_date %>
+</p>
+
+<p>
+  <b>Start time:</b>
+  <%= @kr_schedule.start_time %>
+</p>
+
+<p>
+  <b>End time:</b>
+  <%= @kr_schedule.end_time %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @kr_schedule.location %>
+</p>
+
+
+<%= link_to 'Edit', edit_kr_schedule_path(@kr_schedule) %> |
+<%= link_to 'Back', kr_schedules_path %>

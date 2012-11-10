@@ -1,0 +1,31 @@
+<h1>Lesson Days</h1>
+
+<table>
+  <tr>
+  </tr>
+
+<% calendar_array.each_with_index do |lesson_date, index| %>
+  
+  <% if index % 7 == 0 %>
+  <tr/>
+  <tr/>
+  <% end %>
+  
+  <% if index % 7 == 0 %>
+    <td bgcolor="mistyrose">
+  <% else %>
+    <td bgcolor="palegreen">
+  <% end %>
+  
+  <%= lesson_date %>
+  <textarea disabled="true" style="height: 7em;">
+  <% if @kr_schedules[lesson_date.strftime("%Y%m%d").nil?] %>
+    <%= entity.user_id %>
+  <% end %>
+  </textarea></td>
+<% end %>  
+</table>
+
+<br />
+
+<%= link_to 'out put e-mail text', new_kr_schedule_path %>
