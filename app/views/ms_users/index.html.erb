@@ -1,23 +1,21 @@
 <h1 align=center><i>User List</i></h1>
 
-<table align=center border=1 cellspacing=0 bordercolor=#6699CC>
+<table align=center border=1 cellspacing=0>
   <tr>
-    <th bgcolor=#3399FF>Name</th>
-    <th bgcolor=#3399FF>Language</th>
-    <th bgcolor=#3399FF>Show</th>
-    <th bgcolor=#3399FF>Edit</th>
-    <th bgcolor=#3399FF>Destroy</th>
+    <th>id</th>
+    <th>Name</th>
+    <th>Language</th>
   </tr>
 
 <% @ms_users.each do |ms_user| %>
   <tr>
+    <td><%= ms_user.id %></td>
     <td><%= ms_user.name %></td>
     <td><%= ms_user.language %></td>
-    <td><%= link_to 'Show', ms_user %></td>
-    <td><%= link_to 'Edit', edit_ms_user_path(ms_user) %></td>
-    <td><%= link_to 'Destroy', ms_user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
+
+<p align=center><i><%= link_to 'Register New Member', new_ms_user_path %></i></p>
